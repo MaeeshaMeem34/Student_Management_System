@@ -28,16 +28,27 @@ namespace Student_Management_System
         private void StudentListForm_Load(object sender, EventArgs e)
         {
             // populate the datagrid with student data
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` ");
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 60;
-            dataGridView1.DataSource = student.getStudents(command);
-            dataGridView1.AllowUserToAddRows = false;
+            //showList();
+            studentlist list = new studentlist();
+            list.showlist(this);
+            
 
 
 
 
 
         }
+
+        /*public void showList()
+        {
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `student` ");
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowTemplate.Height = 60;
+            dataGridView1.DataSource = student.getStudents(command);
+            dataGridView1.AllowUserToAddRows = false;
+
+        }
+        */
     }
 }
