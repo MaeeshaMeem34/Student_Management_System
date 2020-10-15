@@ -60,7 +60,7 @@
             this.panelSideMenu.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 753);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 749);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelCourseSubMenu
@@ -107,8 +107,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 28);
             this.button1.TabIndex = 0;
-            this.button1.Text = "See Course";
+            this.button1.Text = "Add Course";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonAddCourse_Click);
             // 
             // buttonCourse
             // 
@@ -123,6 +124,7 @@
             this.buttonCourse.Text = "Courses";
             this.buttonCourse.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.buttonCourse.UseVisualStyleBackColor = true;
+            this.buttonCourse.Click += new System.EventHandler(this.buttonCourse_click);
             // 
             // panelStudentSubMenu
             // 
@@ -224,15 +226,15 @@
             this.panelChildform.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildform.Location = new System.Drawing.Point(250, 0);
             this.panelChildform.Name = "panelChildform";
-            this.panelChildform.Size = new System.Drawing.Size(932, 753);
+            this.panelChildform.Size = new System.Drawing.Size(932, 749);
             this.panelChildform.TabIndex = 1;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1182, 749);
             this.Controls.Add(this.panelChildform);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

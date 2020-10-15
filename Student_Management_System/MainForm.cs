@@ -86,5 +86,16 @@ namespace Student_Management_System
             HideSubMenu();
 
         }
+
+        private void buttonAddCourse_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddCourseForm());
+            HideSubMenu();
+        }
+
+        private void buttonCourse_click(object sender, EventArgs e)
+        {
+            showSubMenu(panelCourseSubMenu);
+        }
     }
 }
