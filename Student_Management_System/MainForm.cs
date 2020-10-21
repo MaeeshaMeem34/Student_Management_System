@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management_System.ViewController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +97,19 @@ namespace Student_Management_System
         private void buttonCourse_click(object sender, EventArgs e)
         {
             showSubMenu(panelCourseSubMenu);
+        }
+
+        private void SeeCourselistButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CourseListForm());
+            HideSubMenu();
+        }
+
+        private void buttonEditDel_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UpdateDeleteCourseForm());
+            HideSubMenu();
+
         }
     }
 }

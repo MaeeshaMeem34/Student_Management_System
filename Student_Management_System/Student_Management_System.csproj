@@ -55,9 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewController\CourseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\CourseListForm.Designer.cs">
+      <DependentUpon>CourseListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\CourseTable.cs" />
     <Compile Include="Model\IDatabaseTable.cs" />
+    <Compile Include="Presenter\DisplayCoursePresenter.cs" />
+    <Compile Include="Presenter\UpdateDeleteCoursePresenter.cs" />
+    <Compile Include="testClass.cs" />
     <Compile Include="ViewController\AddCourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +109,15 @@
       <DependentUpon>StudentListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewController\IAddCourseFormView.cs" />
+    <Compile Include="ViewController\UpdateDeleteCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewController\UpdateDeleteCourseForm.Designer.cs">
+      <DependentUpon>UpdateDeleteCourseForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ViewController\CourseListForm.resx">
+      <DependentUpon>CourseListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewController\AddCourseForm.resx">
       <DependentUpon>AddCourseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentListForm.resx">
       <DependentUpon>StudentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewController\UpdateDeleteCourseForm.resx">
+      <DependentUpon>UpdateDeleteCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

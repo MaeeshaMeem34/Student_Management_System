@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Student_Management_System
 {
@@ -22,12 +22,6 @@ namespace Student_Management_System
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
-            //Image image1 = Image.FromFile("../../Resources/username.png");
-            //pictureBox1.Image = image1;
-
-            
-
-
         }
 
        
@@ -39,32 +33,41 @@ namespace Student_Management_System
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            checkDb(textBoxUsername.Text, textBoxPassword.Text);
+       }
+
+        public bool checkDb(string name, string pass)
+        {
             DatabaseConnection db = new DatabaseConnection();
 
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            DataTable table = new DataTable();
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `username`=@usn AND `password`=@pass", db.GetConnection);
-            command.Parameters.Add("@usn", MySqlDbType.VarChar).Value = textBoxUsername.Text;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Text;
 
-            adapter.SelectCommand = command;
+            if (name == "" || pass == "")
+            {
+                throw new NullReferenceException("Field cannot be empty");
+            }
+
+
+            string sql = "SELECT * FROM user WHERE username='" + name.Trim() + "' AND password='" + pass.Trim() + "'";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, db.GetConnection);
+            DataTable table = new DataTable();
+
             adapter.Fill(table);
 
-            if(table.Rows.Count > 0)
+            if (table.Rows.Count == 0)
             {
-                this.DialogResult = DialogResult.OK;
+                return false;
             }
             else
             {
-                MessageBox.Show("Invalid username or password","Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.OK;
+
+                return true;
             }
-
-
-
-
 
         }
 
-       
+
+
+
     }
 }

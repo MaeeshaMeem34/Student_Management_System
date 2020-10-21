@@ -11,5 +11,8 @@ namespace Student_Management_System.Model
     {
        public bool SendData();
        public DataTable GetData();
+
+        public bool UpdateInfo();
+        public bool DeleteInfo(int id);
     }
 }

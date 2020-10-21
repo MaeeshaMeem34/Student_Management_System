@@ -61,7 +61,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(221, 21);
             this.textBoxUsername.TabIndex = 3;
-            
             // 
             // textBoxPassword
             // 
@@ -74,7 +73,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(238, 21);
             this.textBoxPassword.TabIndex = 4;
             this.textBoxPassword.UseSystemPasswordChar = true;
-            
             // 
             // buttonCancel
             // 

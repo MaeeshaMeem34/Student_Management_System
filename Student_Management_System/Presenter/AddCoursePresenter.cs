@@ -2,13 +2,15 @@
 using Student_Management_System.ViewController;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Student_Management_System.Controller
+namespace Student_Management_System.Presenter
 {
-    
+
     class AddCoursePresenter
     {
         private IAddCourseFormView addCourseFormView;
@@ -17,12 +19,12 @@ namespace Student_Management_System.Controller
         {
             this.addCourseFormView = addCourseFormView;
         }
-        
 
-        public bool onPressingAddingCourseButton(string CourseName,string CourseCode,string CourseCredit)
+
+        public bool onPressingAddingCourseButton(string CourseName, string CourseCode, string CourseCredit)
         {
-            if(CourseName=="" || CourseCredit=="" || CourseCode=="")
-            return false;
+            if (CourseName == "" || CourseCredit == "" || CourseCode == "")
+                return false;
             else
             {
 
@@ -34,6 +36,7 @@ namespace Student_Management_System.Controller
 
 
 
-        
+
+
     }
 }

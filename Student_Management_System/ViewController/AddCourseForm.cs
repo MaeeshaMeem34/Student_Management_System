@@ -1,4 +1,6 @@
-﻿using Student_Management_System.Controller;
+﻿
+using Student_Management_System.Model;
+using Student_Management_System.Presenter;
 using Student_Management_System.ViewController;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ namespace Student_Management_System
 {
     public partial class AddCourseForm : Form,IAddCourseFormView
     {
+        
         public AddCourseForm()
         {
             InitializeComponent();
@@ -27,9 +30,15 @@ namespace Student_Management_System
         private void buttonAdd_click(object sender, EventArgs e)
         {
             AddCoursePresenter addCoursePresenter = new AddCoursePresenter(this);
+
             
-            if (addCoursePresenter.onPressingAddingCourseButton(textCourseName.Text,textCourseCode.Text,textCourseCredit.Text) == false)
+            
+            if (addCoursePresenter.onPressingAddingCourseButton(textCourseName.Text,textCourseCode.Text, textCourseCredit.Text) == false)
              MessageBox.Show("Something went wrong");
+            else
+            {
+                MessageBox.Show("Course info saved!");
+            }
 
         }
 

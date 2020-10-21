@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Student_Management_System
 {
@@ -27,6 +28,9 @@ namespace Student_Management_System
                 GetConnection.Close();
             }
         }
+
+
+        
 
 
     }

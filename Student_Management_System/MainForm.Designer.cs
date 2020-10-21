@@ -30,8 +30,8 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelCourseSubMenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonEditDel = new System.Windows.Forms.Button();
+            this.SeeCourselistButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonCourse = new System.Windows.Forms.Button();
             this.panelStudentSubMenu = new System.Windows.Forms.Panel();
@@ -65,8 +65,8 @@
             // 
             // panelCourseSubMenu
             // 
-            this.panelCourseSubMenu.Controls.Add(this.button5);
-            this.panelCourseSubMenu.Controls.Add(this.button4);
+            this.panelCourseSubMenu.Controls.Add(this.buttonEditDel);
+            this.panelCourseSubMenu.Controls.Add(this.SeeCourselistButton);
             this.panelCourseSubMenu.Controls.Add(this.button1);
             this.panelCourseSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCourseSubMenu.Location = new System.Drawing.Point(0, 307);
@@ -74,29 +74,31 @@
             this.panelCourseSubMenu.Size = new System.Drawing.Size(250, 112);
             this.panelCourseSubMenu.TabIndex = 4;
             // 
-            // button5
+            // buttonEditDel
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(0, 56);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(250, 28);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "See Course";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonEditDel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEditDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditDel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEditDel.Location = new System.Drawing.Point(0, 56);
+            this.buttonEditDel.Name = "buttonEditDel";
+            this.buttonEditDel.Size = new System.Drawing.Size(250, 28);
+            this.buttonEditDel.TabIndex = 2;
+            this.buttonEditDel.Text = "Edit/Delete Student";
+            this.buttonEditDel.UseVisualStyleBackColor = true;
+            this.buttonEditDel.Click += new System.EventHandler(this.buttonEditDel_Click);
             // 
-            // button4
+            // SeeCourselistButton
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(0, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(250, 28);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "See Course";
-            this.button4.UseVisualStyleBackColor = true;
+            this.SeeCourselistButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SeeCourselistButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SeeCourselistButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.SeeCourselistButton.Location = new System.Drawing.Point(0, 28);
+            this.SeeCourselistButton.Name = "SeeCourselistButton";
+            this.SeeCourselistButton.Size = new System.Drawing.Size(250, 28);
+            this.SeeCourselistButton.TabIndex = 1;
+            this.SeeCourselistButton.Text = "See CourseList";
+            this.SeeCourselistButton.UseVisualStyleBackColor = true;
+            this.SeeCourselistButton.Click += new System.EventHandler(this.SeeCourselistButton_Click);
             // 
             // button1
             // 
@@ -231,7 +233,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1182, 749);
@@ -253,8 +255,8 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelCourseSubMenu;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonEditDel;
+        private System.Windows.Forms.Button SeeCourselistButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonCourse;
         private System.Windows.Forms.Panel panelStudentSubMenu;
